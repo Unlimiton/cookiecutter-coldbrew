@@ -37,7 +37,7 @@ func GetReadyState(ctx context.Context) (*httpbody.HttpBody, error) {
 	if st == statusReady {
 		return GetHealthCheck(ctx), nil
 	}
-	return nil, status.Error(codes.Internal, "Not Ready to server traffic")
+	return nil, status.Error(codes.Internal, "Not Ready to serve traffic")
 }
 
 func SetNotReady() {
